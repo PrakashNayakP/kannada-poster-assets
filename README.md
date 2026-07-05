@@ -1,11 +1,12 @@
 # Kannada Poster Maker — Asset Repo
 
-Manage the app's **sticker** and **template** images here. Drop images into
-folders, push to GitHub, run one command, and they go live in the app.
+Manage all of the app's dynamic content — **quotes**, **stickers**, and
+**templates** — from this one repo. Edit files, push to GitHub, run one
+command, and it goes live in the app.
 
 - Images are served free via the **jsDelivr CDN** (backed by this public GitHub repo).
-- Firestore only stores the image **URLs** — the sync script generates them for you.
-- **Quotes** are text-only and managed directly in the Firebase console, not here.
+- Firestore stores only text + image **URLs** — the sync script generates them for you.
+- A single `npm run sync` updates quotes, stickers, and templates together.
 
 ---
 
@@ -51,20 +52,30 @@ npm install
 
 ## Everyday workflow
 
+### Edit **quotes**  (text only — no images)
+- Open `quotes.json` and edit categories / quotes directly.
+- Each entry needs `id` (unique), `name` (the Kannada category label), `order`,
+  and a `quotes` array. Add a whole new category by adding another object.
+
 ### Add / change **stickers**
 - Sticker images must be **transparent PNGs**.
 - Drop them into the category folder: `stickers/festive/`, `stickers/art/`, etc.
-- To add a **new category**, add an entry to `catalog.json` and create the folder:
+- To add a **new category**, add an entry to `catalog.json` → `stickers` and
+  create the matching folder:
   ```json
   { "id": "wedding", "name": "Wedding", "order": 6, "emojis": [] }
   ```
 - Categories can mix emojis (listed in `catalog.json`) and image files.
 
-### Add / change **templates**
-- Drop background images into `templates/`.
-- Name them `<order>-<Name>.<ext>` so the app shows them in order with a title:
-  - `01-Mountain.jpg` → order 1, name "Mountain"
-  - `02-Diwali Night.png` → order 2, name "Diwali Night"
+### Add / change **templates**  (now category-based, like stickers)
+- Drop background images into a category folder: `templates/nature/`,
+  `templates/festival/`, etc.
+- To add a **new category**, add an entry to `catalog.json` → `templates` and
+  create the matching folder:
+  ```json
+  { "id": "wedding", "name": "Wedding", "order": 3 }
+  ```
+- Any filename works — templates are grouped by category, not named individually.
 
 ### Publish
 ```
@@ -81,7 +92,7 @@ That's it — the app picks up changes on its next open.
 
 | Command | What it does |
 | --- | --- |
-| `npm run sync` | Add/update stickers & templates from the current files. Never deletes. |
+| `npm run sync` | Add/update quotes, stickers & templates from the current files. Never deletes. |
 | `npm run sync:prune` | Same, **and** removes Firestore entries whose files/categories no longer exist here (makes the repo the exact source of truth). |
 
 ---

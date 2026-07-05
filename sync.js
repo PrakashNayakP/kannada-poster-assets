@@ -103,21 +103,33 @@ async function syncStickers() {
 }
 
 async function syncTemplates() {
-  // Filename convention: "01-Mountain.jpg" -> order 1, name "Mountain".
+  const catalog = JSON.parse(fs.readFileSync("./catalog.json", "utf8"));
   const docs = {};
 
-  for (const file of listImages("templates")) {
-    const base = path.basename(file, path.extname(file));
-    const match = base.match(/^(\d+)[-_ ](.+)$/);
+  for (const cat of catalog.templates || []) {
+    const imageUrls = listImages(path.join("templates", cat.id)).map((f) =>
+      cdnUrl(path.join("templates", cat.id, f))
+    );
 
-    const order = match ? parseInt(match[1], 10) : 999;
-    const name = (match ? match[2] : base).replace(/[-_]+/g, " ").trim();
-    const id = base.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    // Skip empty categories so the app doesn't show a blank tab.
+    if (imageUrls.length === 0) continue;
 
-    docs[id] = { name, order, imageUrl: cdnUrl(path.join("templates", file)) };
+    docs[cat.id] = { name: cat.name, order: cat.order, items: imageUrls };
   }
 
   await reconcile("templates", docs);
+}
+
+async function syncQuotes() {
+  const data = JSON.parse(fs.readFileSync("./quotes.json", "utf8"));
+  const docs = {};
+
+  for (const cat of data.quotes || []) {
+    if (!cat.quotes || cat.quotes.length === 0) continue;
+    docs[cat.id] = { name: cat.name, order: cat.order, quotes: cat.quotes };
+  }
+
+  await reconcile("quotes", docs);
 }
 
 (async () => {
@@ -125,6 +137,7 @@ async function syncTemplates() {
     `Syncing to gh/${CONFIG.githubUser}/${CONFIG.githubRepo}@${CONFIG.branch}` +
       (PRUNE ? "  (prune ON)" : "")
   );
+  await syncQuotes();
   await syncStickers();
   await syncTemplates();
   console.log("✓ Sync complete.");
