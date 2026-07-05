@@ -1,0 +1,13 @@
+{
+  "name": "kannada-poster-assets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sticker & template images for Kannada Poster Maker, synced to Firestore.",
+  "scripts": {
+    "sync": "node sync.js",
+    "sync:prune": "node sync.js --prune"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0"
+  }
+}

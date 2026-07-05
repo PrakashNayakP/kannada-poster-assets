@@ -1,0 +1,10 @@
+{
+  "_comment": "Sticker category metadata. Images placed in stickers/<id>/ are appended (as CDN URLs) to that category's items, after any emojis listed here. Quotes are managed directly in the Firebase console, not here.",
+  "stickers": [
+    { "id": "emotions", "name": "Emotions", "order": 1, "emojis": ["😀", "😍", "😂", "🥳", "😎", "🤩", "😇", "🥰", "😜", "🤗"] },
+    { "id": "festive",  "name": "Festive",  "order": 2, "emojis": ["🎉", "🎊", "🎂", "🎈", "🪔", "✨", "🎁", "🎇", "🌟", "🏵️"] },
+    { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"] },
+    { "id": "symbols",  "name": "Symbols",  "order": 4, "emojis": ["❤️", "🔥", "💯", "🙏", "👍", "🕉️", "☮️", "💫", "🎯", "🏆"] },
+    { "id": "art",      "name": "Art",      "order": 5, "emojis": [] }
+  ]
+}
