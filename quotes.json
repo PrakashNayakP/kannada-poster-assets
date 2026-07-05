@@ -54,6 +54,10 @@
         "ಪ್ರಯತ್ನವೇ ಯಶಸ್ಸಿನ ಮೆಟ್ಟಿಲು",
         "ಸೋಲು ಗೆಲುವಿನ ಮೊದಲ ಹೆಜ್ಜೆ",
         "ನಂಬಿಕೆ ಇರಲಿ, ಗೆಲುವು ನಿಮ್ಮದೇ"
+      ],
+      "_comment_premium": "Items listed here require watching a rewarded ad to unlock. Values must match entries in `quotes` exactly.",
+      "premium": [
+        "ನಂಬಿಕೆ ಇರಲಿ, ಗೆಲುವು ನಿಮ್ಮದೇ"
       ]
     }
   ]

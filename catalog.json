@@ -1,8 +1,8 @@
 {
-  "_comment": "Category metadata for stickers and templates. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json.",
+  "_comment": "Category metadata for stickers and templates. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json. Optional `premium` lists which items (emoji chars or image filenames) require a rewarded ad to unlock.",
 
   "stickers": [
-    { "id": "emotions", "name": "Emotions", "order": 1, "emojis": ["😀", "😍", "😂", "🥳", "😎", "🤩", "😇", "🥰", "😜", "🤗"] },
+    { "id": "emotions", "name": "Emotions", "order": 1, "emojis": ["😀", "😍", "😂", "🥳", "😎", "🤩", "😇", "🥰", "😜", "🤗"], "premium": ["🤩", "🥰"] },
     { "id": "festive",  "name": "Festive",  "order": 2, "emojis": ["🎉", "🎊", "🎂", "🎈", "🪔", "✨", "🎁", "🎇", "🌟", "🏵️"] },
     { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"] },
     { "id": "symbols",  "name": "Symbols",  "order": 4, "emojis": ["❤️", "🔥", "💯", "🙏", "👍", "🕉️", "☮️", "💫", "🎯", "🏆"] },
@@ -10,7 +10,7 @@
   ],
 
   "templates": [
-    { "id": "nature",   "name": "Nature",   "order": 1 },
+    { "id": "nature",   "name": "Nature",   "order": 1, "premium": ["pexels-dropshado-32547449.jpg"] },
     { "id": "festival", "name": "Festival", "order": 2 }
   ]
 }

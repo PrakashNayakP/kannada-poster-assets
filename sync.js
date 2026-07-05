@@ -57,6 +57,17 @@ function listImages(dir) {
     .sort();
 }
 
+/**
+ * Resolves a "premium" catalog entry to the value stored in `items`: an image
+ * filename becomes its CDN URL; anything else (an emoji, a quote) is kept as-is.
+ */
+function resolvePremium(subdir, id, entry) {
+  if (IMAGE_EXT.includes(path.extname(entry).toLowerCase())) {
+    return cdnUrl(path.join(subdir, id, entry));
+  }
+  return entry;
+}
+
 /** Writes `docs`, and (only with --prune) deletes docs not in `docs`. */
 async function reconcile(collection, docs) {
   const batch = db.batch();
@@ -96,7 +107,11 @@ async function syncStickers() {
     // Skip empty categories so the app doesn't show a blank tab.
     if (items.length === 0) continue;
 
-    docs[cat.id] = { name: cat.name, order: cat.order, items };
+    const premium = (cat.premium || []).map((e) =>
+      resolvePremium("stickers", cat.id, e)
+    );
+
+    docs[cat.id] = { name: cat.name, order: cat.order, items, premium };
   }
 
   await reconcile("stickers", docs);
@@ -114,7 +129,11 @@ async function syncTemplates() {
     // Skip empty categories so the app doesn't show a blank tab.
     if (imageUrls.length === 0) continue;
 
-    docs[cat.id] = { name: cat.name, order: cat.order, items: imageUrls };
+    const premium = (cat.premium || []).map((e) =>
+      resolvePremium("templates", cat.id, e)
+    );
+
+    docs[cat.id] = { name: cat.name, order: cat.order, items: imageUrls, premium };
   }
 
   await reconcile("templates", docs);
@@ -126,7 +145,12 @@ async function syncQuotes() {
 
   for (const cat of data.quotes || []) {
     if (!cat.quotes || cat.quotes.length === 0) continue;
-    docs[cat.id] = { name: cat.name, order: cat.order, quotes: cat.quotes };
+    docs[cat.id] = {
+      name: cat.name,
+      order: cat.order,
+      quotes: cat.quotes,
+      premium: cat.premium || [],
+    };
   }
 
   await reconcile("quotes", docs);
