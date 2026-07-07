@@ -11,6 +11,7 @@
 
   "templates": [
     { "id": "nature",   "name": "Nature",   "order": 1, "premium": ["pexels-dropshado-32547449.jpg"] },
-    { "id": "festival", "name": "Festival", "order": 2 }
+    { "id": "festival", "name": "Festival", "order": 2 },
+    { "id": "cinema",   "name": "Cinema",   "order": 3 }
   ]
 }
