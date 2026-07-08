@@ -1,0 +1,39 @@
+{
+  "_comment": "Remote ad configuration, written to Firestore config/ads by `npm run sync`. Every field is optional in the app (a missing field falls back to the in-app default). 0 disables an interstitial trigger or native placement. adsEnabled is the global kill-switch. reward.enabled toggles the 'remove ads' perk on Home.",
+
+  "adsEnabled": true,
+
+  "interstitial": {
+    "minIntervalSeconds": 60,
+    "maxPerSession": 4,
+    "every": {
+      "home": 3,
+      "library": 2,
+      "templates": 0,
+      "quotes": 3,
+      "stickers": 3,
+      "export": 3
+    }
+  },
+
+  "native": {
+    "library": 0,
+    "templates": 6,
+    "quotes": 5,
+    "stickers": 9
+  },
+
+  "banner": {
+    "home": true,
+    "editor": true,
+    "export": true,
+    "library": true,
+    "quotes": true,
+    "stickers": true,
+    "templates": true
+  },
+
+  "appOpen": { "enabled": true },
+
+  "reward": { "enabled": false, "adsToWatch": 2, "adFreeHours": 4 }
+}

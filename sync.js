@@ -156,6 +156,21 @@ async function syncQuotes() {
   await reconcile("quotes", docs);
 }
 
+/**
+ * Writes config.json to Firestore config/ads (the app's remote ad config).
+ * A single document, so it's a plain overwrite — config.json is the source of
+ * truth. The leading "_comment" key is stripped before writing.
+ */
+async function syncConfig() {
+  if (!fs.existsSync("./config.json")) return;
+
+  const config = JSON.parse(fs.readFileSync("./config.json", "utf8"));
+  delete config._comment;
+
+  await db.collection("config").doc("ads").set(config);
+  console.log("  config/ads: written");
+}
+
 (async () => {
   console.log(
     `Syncing to gh/${CONFIG.githubUser}/${CONFIG.githubRepo}@${CONFIG.branch}` +
@@ -164,6 +179,7 @@ async function syncQuotes() {
   await syncQuotes();
   await syncStickers();
   await syncTemplates();
+  await syncConfig();
   console.log("✓ Sync complete.");
   process.exit(0);
 })().catch((e) => {
