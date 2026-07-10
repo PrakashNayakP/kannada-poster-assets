@@ -35,5 +35,5 @@
 
   "appOpen": { "enabled": true },
 
-  "reward": { "enabled": false, "adsToWatch": 2, "adFreeHours": 4 }
+  "reward": { "enabled": true, "adsToWatch": 3, "adFreeHours": 1 }
 }

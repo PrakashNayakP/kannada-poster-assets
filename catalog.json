@@ -6,7 +6,8 @@
     { "id": "festive",  "name": "Festive",  "order": 2, "emojis": ["🎉", "🎊", "🎂", "🎈", "🪔", "✨", "🎁", "🎇", "🌟", "🏵️"] },
     { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"] },
     { "id": "symbols",  "name": "Symbols",  "order": 4, "emojis": ["❤️", "🔥", "💯", "🙏", "👍", "🕉️", "☮️", "💫", "🎯", "🏆"] },
-    { "id": "art",      "name": "Art",      "order": 5, "emojis": [] }
+    { "id": "art",      "name": "Art",      "order": 5, "emojis": [] },
+    { "id": "kannada",   "name": "Kannada",  "order": 6, "emojis": [],"premium": ["RCB-Logo-2-Star.png", "Appu.png","Karnataka.png"]  }
   ],
 
   "templates": [
