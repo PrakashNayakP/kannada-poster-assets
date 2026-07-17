@@ -68,6 +68,19 @@ function resolvePremium(subdir, id, entry) {
   return entry;
 }
 
+/**
+ * Resolves the keys of a search-metadata map ({ itemKey: "keywords" }) the same
+ * way items are resolved — a filename becomes its CDN URL, an emoji / quote text
+ * is kept as-is — so the app can look it up by the item's stored value.
+ */
+function resolveMap(subdir, id, map) {
+  const out = {};
+  for (const [key, val] of Object.entries(map || {})) {
+    out[resolvePremium(subdir, id, key)] = val;
+  }
+  return out;
+}
+
 /** Writes `docs`, and (only with --prune) deletes docs not in `docs`. */
 async function reconcile(collection, docs) {
   const batch = db.batch();
@@ -111,7 +124,14 @@ async function syncStickers() {
       resolvePremium("stickers", cat.id, e)
     );
 
-    docs[cat.id] = { name: cat.name, order: cat.order, items, premium };
+    docs[cat.id] = {
+      name: cat.name,
+      order: cat.order,
+      items,
+      premium,
+      tags: resolveMap("stickers", cat.id, cat.tags),
+      desc: resolveMap("stickers", cat.id, cat.desc),
+    };
   }
 
   await reconcile("stickers", docs);
@@ -133,7 +153,14 @@ async function syncTemplates() {
       resolvePremium("templates", cat.id, e)
     );
 
-    docs[cat.id] = { name: cat.name, order: cat.order, items: imageUrls, premium };
+    docs[cat.id] = {
+      name: cat.name,
+      order: cat.order,
+      items: imageUrls,
+      premium,
+      tags: resolveMap("templates", cat.id, cat.tags),
+      desc: resolveMap("templates", cat.id, cat.desc),
+    };
   }
 
   await reconcile("templates", docs);
@@ -150,6 +177,8 @@ async function syncQuotes() {
       order: cat.order,
       quotes: cat.quotes,
       premium: cat.premium || [],
+      tags: resolveMap("quotes", cat.id, cat.tags),
+      desc: resolveMap("quotes", cat.id, cat.desc),
     };
   }
 

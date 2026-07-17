@@ -2,8 +2,28 @@
   "_comment": "Category metadata for stickers and templates. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json. Optional `premium` lists which items (emoji chars or image filenames) require a rewarded ad to unlock.",
 
   "stickers": [
-    { "id": "kannada",   "name": "Kannada",  "order": 1, "emojis": [],"premium": ["RCB-Logo-2-Star.png", "Appu.png","Karnataka.png"]  },
-        { "id": "actors",   "name": "Actors",  "order": 2},
+    { "id": "kannada",   "name": "Kannada",  "order": 1, "emojis": [], "premium": ["RCB-Logo-2-Star.png", "Appu.png","Karnataka.png"],
+      "tags": {
+        "Appu.png": "appu puneeth rajkumar actor power star kannada",
+        "Appu-Text.png": "appu text name kannada"
+      },
+      "desc": {
+        "Appu.png": "Puneeth Rajkumar (Appu)",
+        "Appu-Text.png": "Appu text sticker"
+      }
+    },
+    { "id": "actors",   "name": "Actors",  "order": 2,
+      "tags": {
+        "Appu.png": "appu puneeth rajkumar actor power star kannada",
+        "Appu-Rajakumara.png": "appu rajakumara puneeth rajkumar movie kannada actor",
+        "Appu-With-Parivala.png": "appu parivala puneeth rajkumar family kannada"
+      },
+      "desc": {
+        "Appu.png": "Puneeth Rajkumar (Appu)",
+        "Appu-Rajakumara.png": "Appu as Rajakumara",
+        "Appu-With-Parivala.png": "Appu with Parivala"
+      }
+    },
     { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"] },
     { "id": "symbols",  "name": "Symbols",  "order": 4, "emojis": ["❤️", "🔥", "💯", "🙏", "👍", "🕉️", "☮️", "💫", "🎯", "🏆"] },
     { "id": "art",      "name": "Art",      "order": 5, "emojis": [] },
