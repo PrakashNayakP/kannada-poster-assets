@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "name": "Raksha Bandhan",
+  "imagePath": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/festival/raksha-bandhan-01_bg.png",
+  "ratio": "ORIGINAL",
+  "bgColor": -16777216,
+  "solidCanvas": false,
+  "updatedAt": 1784461971346,
+  "textLayers": [
+    {
+      "id": "1784461748769",
+      "text": "ರಕ್ಷಾಬಂಧನದ ಶುಭಾಶಯಗಳು",
+      "offsetX": -66.46365356445312,
+      "offsetY": 195.946044921875,
+      "fontSize": 32.13617706298828,
+      "rotation": 0,
+      "boxWidth": 627.3148193359375,
+      "color": -1,
+      "opacity": 1,
+      "letterSpacingEm": 0,
+      "lineHeightEm": 1.205416202545166,
+      "alignment": "CENTER",
+      "shadowColor": -16777216,
+      "shadowRadius": 0,
+      "shadowDx": 0,
+      "shadowDy": 0,
+      "gradient": "NONE",
+      "strokeColor": -16777216,
+      "strokeWidth": 0,
+      "highlightEnabled": false,
+      "highlightColor": -16777216,
+      "highlightCorner": 0.5,
+      "highlightPadX": 0.11999999731779099,
+      "highlightPadY": 0.11999999731779099,
+      "font": "BANDIPURA"
+    }
+  ],
+  "stickers": [
+    {
+      "id": "1784461883345",
+      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/stickers/kannada/Kananda-Pen.png",
+      "offsetX": 0,
+      "offsetY": -45.104732513427734,
+      "size": 250.159423828125,
+      "rotation": 0,
+      "flipped": false,
+      "opacity": 1
+    },
+    {
+      "id": "1784461908334",
+      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/stickers/gods/baby-krishna.png",
+      "offsetX": -277.9767150878906,
+      "offsetY": 515.5909423828125,
+      "size": 453.6461486816406,
+      "rotation": 0,
+      "flipped": false,
+      "opacity": 1
+    }
+  ],
+  "type": "template",
+  "thumb": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/festival/raksha-bandhan-01.png"
+}
