@@ -24,11 +24,13 @@
         "Appu-With-Parivala.png": "Appu with Parivala"
       }
     },
-    { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"] },
-    { "id": "symbols",  "name": "Symbols",  "order": 4, "emojis": ["❤️", "🔥", "💯", "🙏", "👍", "🕉️", "☮️", "💫", "🎯", "🏆"] },
+    { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"], "premium": ["🌻", "🦋"]  },
+    { "id": "symbols",  "name": "Symbols",  "order": 4 },
     { "id": "art",      "name": "Art",      "order": 5, "emojis": [] },
-    { "id": "emotions", "name": "Emotions", "order": 6, "emojis": ["😀", "😍", "😂", "🥳", "😎", "🤩", "😇", "🥰", "😜", "🤗"], "premium": ["🤩", "🥰"] },
-    { "id": "festive",  "name": "Festive",  "order": 7, "emojis": ["🎉", "🎊", "🎂", "🎈", "🪔", "✨", "🎁", "🎇", "🌟", "🏵️"] }
+    { "id": "emotions", "name": "Emotions", "order": 6},
+    { "id": "festive",  "name": "Festive",  "order": 7 },
+    { "id": "gods",  "name": "Gods",  "order": 8 },
+    { "id": "troll",  "name": "Troll",  "order": 9 }
   ],
 
   "templates": [
