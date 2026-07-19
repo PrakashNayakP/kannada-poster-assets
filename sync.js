@@ -166,6 +166,38 @@ async function syncTemplates() {
   await reconcile("templates", docs);
 }
 
+/**
+ * Editable "designs": each catalog item points to a layout JSON and a
+ * full-composite thumbnail under designs/<catId>/<id>.{json,png}. Only items
+ * whose .json file exists are written, so catalog entries can be scaffolded
+ * ahead of their assets without creating broken cards in the app.
+ */
+async function syncDesigns() {
+  const catalog = JSON.parse(fs.readFileSync("./catalog.json", "utf8"));
+  const docs = {};
+
+  for (const cat of catalog.designs || []) {
+    const items = (cat.items || [])
+      .filter((it) =>
+        fs.existsSync(path.join("designs", cat.id, `${it.id}.json`))
+      )
+      .map((it) => ({
+        name: it.name || "",
+        json: cdnUrl(path.join("designs", cat.id, `${it.id}.json`)),
+        thumb: cdnUrl(path.join("designs", cat.id, `${it.id}.png`)),
+        premium: !!it.premium,
+        tags: it.tags || "",
+      }));
+
+    // Skip empty categories so the app doesn't show a blank tab.
+    if (items.length === 0) continue;
+
+    docs[cat.id] = { name: cat.name, order: cat.order, items };
+  }
+
+  await reconcile("designs", docs);
+}
+
 async function syncQuotes() {
   const data = JSON.parse(fs.readFileSync("./quotes.json", "utf8"));
   const docs = {};
@@ -208,6 +240,7 @@ async function syncConfig() {
   await syncQuotes();
   await syncStickers();
   await syncTemplates();
+  await syncDesigns();
   await syncConfig();
   console.log("✓ Sync complete.");
   process.exit(0);

@@ -1,5 +1,5 @@
 {
-  "_comment": "Category metadata for stickers and templates. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json. Optional `premium` lists which items (emoji chars or image filenames) require a rewarded ad to unlock.",
+  "_comment": "Category metadata for stickers, templates and designs. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json. Editable 'designs' are full posters: each item has a JSON layout file designs/<catId>/<id>.json and a full-composite thumbnail designs/<catId>/<id>.png (both produced by the app's dev 'Save as template' export). Optional `premium` lists which items (emoji chars or image filenames) require a rewarded ad to unlock; for designs `premium` is a per-item boolean.",
 
   "stickers": [
     { "id": "kannada",   "name": "Kannada",  "order": 1, "emojis": [], "premium": ["RCB-Logo-2-Star.png", "Appu.png","Karnataka.png"],
@@ -37,5 +37,15 @@
     { "id": "cinema",   "name": "Cinema",   "order": 3, "premium": [""] },
     { "id": "kannada",   "name": "Kannada",   "order": 4 }
 
+  ],
+
+  "designs": [
+    { "id": "business", "name": "Business", "order": 1, "items": [
+      { "id": "shop-sale", "name": "Shop Sale", "premium": false, "tags": "sale offer discount shop business opening" }
+    ] },
+    { "id": "festival", "name": "Festival", "order": 2, "items": [
+      { "id": "diwali-01", "name": "Diwali Greeting", "premium": true, "tags": "diwali deepavali festival lamp greeting" }
+    ] },
+    { "id": "social", "name": "Social", "order": 3, "items": [] }
   ]
 }
