@@ -24,18 +24,31 @@ designs/
 
 1. **Build the poster in the app** (a debug build).
 2. Tap the **Save (💾)** icon in the editor top bar — it writes a folder
-   (path shown in a toast) containing `template.json`, `background.png` and
-   `thumbnail.png`.
+   (path shown in a toast) containing `template.json`, `thumbnail.png`, and:
+   - `background.png` — only if the background is a **phone photo** (a
+     Templates-screen or gradient/solid background keeps its dynamic URL/spec
+     automatically).
+   - `asset_1.png`, `asset_2.png`, … — only for **manually-picked** phone images
+     (gallery PIP, mask), each referenced as `"REPLACE_WITH_URL:asset_N.png"`.
+     Library stickers and Templates-screen PIPs keep their URLs and aren't
+     exported.
+
+   A design built entirely from Templates/Stickers/gradients exports **just
+   `template.json` + `thumbnail.png`**, already fully wired.
 3. Copy those in here, renamed to your `<designId>`:
    - `template.json`  → `designs/<categoryId>/<designId>.json`
    - `thumbnail.png`  → `designs/<categoryId>/<designId>.png`
-   - `background.png` → `designs/<categoryId>/<designId>_bg.png` (only if the
-     background is a photo/image; skip for a solid/gradient background)
-4. **Edit the JSON's two placeholders:**
-   - `"imagePath"` → the CDN URL of `<designId>_bg.png`
+   - `background.png` → `designs/<categoryId>/<designId>_bg.png` (only if one was
+     exported)
+   - each `asset_N.png` → e.g. `designs/<categoryId>/<designId>_pip1.png`
+4. **Fix any `REPLACE_WITH_*` placeholders** the export left (none if the design
+   used no phone images):
+   - `"imagePath"` (only if `REPLACE_WITH_BACKGROUND…`) → the CDN URL of
+     `<designId>_bg.png`
      (`https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/<categoryId>/<designId>_bg.png`),
-     **or** a `"gradient:AARRGGBB,AARRGGBB"` / `"gradient:RRGGBB,RRGGBB"` spec for
-     a solid/gradient background (no `_bg.png` needed).
+     **or** a `"gradient:AARRGGBB,AARRGGBB"` / `"gradient:RRGGBB,RRGGBB"` spec.
+   - each `"REPLACE_WITH_URL:asset_N.png"` (sticker/PIP/mask `source`) → the CDN
+     URL of the file you uploaded for that `asset_N.png`.
    - `"thumb"` can be left as-is — the app ignores it (the grid thumbnail comes
      from the Firestore `thumb` pointer, which `sync.js` fills from
      `<designId>.png`).

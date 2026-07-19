@@ -46,7 +46,7 @@
       { "id": "shop-sale", "name": "Shop Sale", "premium": false, "tags": "sale offer discount shop business opening" }
     ] },
     { "id": "festival", "name": "Festival", "order": 2, "items": [
-      { "id": "raksha-bandhan-01", "name": "Raksha Bandhan", "premium": false, "tags": "raksha bandhan rakhi festival greeting ರಕ್ಷಾಬಂಧನ" },
+      { "id": "raksha-bandhan-01", "name": "Raksha Bandhan", "premium": true, "tags": "raksha bandhan rakhi festival greeting ರಕ್ಷಾಬಂಧನ" },
       { "id": "diwali-01", "name": "Diwali Greeting", "premium": true, "tags": "diwali deepavali festival lamp greeting" }
     ] },
     { "id": "social", "name": "Social", "order": 3, "items": [] }
