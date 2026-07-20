@@ -232,6 +232,21 @@ async function syncConfig() {
   console.log("  config/ads: written");
 }
 
+/**
+ * Writes app-config.json to Firestore config/app (privacy policy URL, Play
+ * Store URL, support email — see docs/asset-management.md). Same shape as
+ * syncConfig(): a plain overwrite, app-config.json is the source of truth.
+ */
+async function syncAppConfig() {
+  if (!fs.existsSync("./app-config.json")) return;
+
+  const config = JSON.parse(fs.readFileSync("./app-config.json", "utf8"));
+  delete config._comment;
+
+  await db.collection("config").doc("app").set(config);
+  console.log("  config/app: written");
+}
+
 (async () => {
   console.log(
     `Syncing to gh/${CONFIG.githubUser}/${CONFIG.githubRepo}@${CONFIG.branch}` +
@@ -242,6 +257,7 @@ async function syncConfig() {
   await syncTemplates();
   await syncDesigns();
   await syncConfig();
+  await syncAppConfig();
   console.log("✓ Sync complete.");
   process.exit(0);
 })().catch((e) => {

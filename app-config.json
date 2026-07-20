@@ -1,0 +1,9 @@
+{
+  "_comment": "Remote app-level links, written to Firestore config/app by `npm run sync`. Lets the privacy policy URL, Play Store URL, and support email be changed without an app release. Every field is optional — a missing/blank field falls back to the value built into the app.",
+
+  "privacyPolicyUrl": "https://prakashnayakp.github.io/kannada-poster-assets/privacy-policy.html",
+
+  "playStoreUrl": "",
+
+  "supportEmail": "karnatakarondup@gmail.com"
+}
