@@ -3,3 +3,6 @@ serviceAccountKey.json
 
 # Node
 node_modules/
+
+# Firebase CLI deploy cache
+.firebase/

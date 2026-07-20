@@ -1,7 +1,7 @@
 {
-  "_comment": "Remote app-level links, written to Firestore config/app by `npm run sync`. Lets the privacy policy URL, Play Store URL, and support email be changed without an app release. Every field is optional — a missing/blank field falls back to the value built into the app.",
+  "_comment": "Remote app-level links, written to Firestore config/app by `npm run sync`. Lets the privacy policy URL, Play Store URL, and support email be changed without an app release. playStoreUrl is optional (blank = auto-derived from the app's package id); privacyPolicyUrl and supportEmail have NO in-app fallback — until this syncs, the corresponding buttons in the app silently do nothing.",
 
-  "privacyPolicyUrl": "https://prakashnayakp.github.io/kannada-poster-assets/privacy-policy.html",
+  "privacyPolicyUrl": "https://kannada-poster-maker.web.app/privacy-policy.html",
 
   "playStoreUrl": "",
 
