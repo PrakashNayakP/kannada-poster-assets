@@ -55,8 +55,7 @@
     },
     "download": {
       "template": true,
-      "sticker": true,
-      "design": true
+      "sticker": true
     }
   }
 }
