@@ -1,24 +1,28 @@
 {
-  "_comment": "Remote ad configuration, written to Firestore config/ads by `npm run sync`. Every field is optional in the app (a missing field falls back to the in-app default). 0 disables an interstitial trigger or native placement. adsEnabled is the global kill-switch. reward.enabled toggles the 'remove ads' perk on Home.",
+  "_comment": "Remote ad configuration, written to Firestore config/ads by `npm run sync`. Every field is optional in the app (a missing field falls back to the in-app default, which mirrors this file). 0 disables an interstitial trigger or native placement. adsEnabled is the global kill-switch. reward.unlockPremium / reward.download are per-catalog watch-to-unlock switches: setting one to false makes that content FREE, never unavailable.",
 
   "adsEnabled": true,
 
   "interstitial": {
     "minIntervalSeconds": 60,
-    "maxPerSession": 4,
+    "maxPerSession": 5,
     "every": {
-      "home": 3,
-      "library": 2,
+      "home": 4,
+      "library": 3,
       "templates": 0,
       "quotes": 3,
       "stickers": 3,
-      "export": 3
+      "designs": 3,
+      "collage": 4,
+      "brand": 5,
+      "export": 2
     }
   },
 
   "native": {
-    "library": 0,
+    "library": 4,
     "templates": 6,
+    "designs": 6,
     "quotes": 5,
     "stickers": 9
   },
@@ -30,10 +34,29 @@
     "library": true,
     "quotes": true,
     "stickers": true,
-    "templates": true
+    "templates": true,
+    "designs": true,
+    "collage": true,
+    "brand": true
   },
 
   "appOpen": { "enabled": true },
 
-  "reward": { "enabled": true, "adsToWatch": 3, "adFreeHours": 1 }
+  "reward": {
+    "enabled": true,
+    "adsToWatch": 3,
+    "adFreeHours": 1,
+    "unlockPremium": {
+      "template": true,
+      "sticker": true,
+      "quote": true,
+      "design": true,
+      "removeBackground": true
+    },
+    "download": {
+      "template": true,
+      "sticker": true,
+      "design": true
+    }
+  }
 }
