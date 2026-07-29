@@ -5,5 +5,8 @@
 
   "playStoreUrl": "",
 
-  "supportEmail": "karnatakarondup@gmail.com"
+  "supportEmail": "karnatakarondup@gmail.com",
+  "minSupportedVersion": 1,
+  "latestVersion": 1,
+  "updateMessage": "New designs and fixes."
 }
