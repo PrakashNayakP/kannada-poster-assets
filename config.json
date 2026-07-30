@@ -46,13 +46,17 @@
     "enabled": true,
     "adsToWatch": 3,
     "adFreeHours": 1,
-    "bgRemovalMaxCount": 3,
+    "credits": {
+      "removeBackground":  { "adsToWatch": 1, "count": 3 },
+      "transparentExport": { "adsToWatch": 2, "count": 3 }
+    },
     "unlockPremium": {
       "template": true,
       "sticker": true,
       "quote": true,
       "design": true,
-      "removeBackground": true
+      "removeBackground": true,
+      "transparentExport": true
     },
     "download": {
       "template": true,
