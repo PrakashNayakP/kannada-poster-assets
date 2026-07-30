@@ -46,6 +46,7 @@
     "enabled": true,
     "adsToWatch": 3,
     "adFreeHours": 1,
+    "bgRemovalMaxCount": 3,
     "unlockPremium": {
       "template": true,
       "sticker": true,
