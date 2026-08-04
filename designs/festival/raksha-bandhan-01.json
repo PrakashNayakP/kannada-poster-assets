@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "Raksha Bandhan",
-  "imagePath": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/festival/raksha-bandhan-01_bg.png",
+  "imagePath": "https://cdn.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/designs/festival/raksha-bandhan-01_bg.png",
   "ratio": "ORIGINAL",
   "bgColor": -16777216,
   "solidCanvas": false,
@@ -38,7 +38,7 @@
   "stickers": [
     {
       "id": "1784461883345",
-      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/stickers/kannada/Kananda-Pen.png",
+      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/stickers/kannada/Kananda-Pen.png",
       "offsetX": 0,
       "offsetY": -45.104732513427734,
       "size": 250.159423828125,
@@ -48,7 +48,7 @@
     },
     {
       "id": "1784461908334",
-      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/stickers/gods/baby-krishna.png",
+      "source": "https://cdn.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/stickers/gods/baby-krishna.png",
       "offsetX": -277.9767150878906,
       "offsetY": 515.5909423828125,
       "size": 453.6461486816406,
@@ -58,5 +58,5 @@
     }
   ],
   "type": "template",
-  "thumb": "https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/festival/raksha-bandhan-01.png"
+  "thumb": "https://cdn.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/designs/festival/raksha-bandhan-01.png"
 }

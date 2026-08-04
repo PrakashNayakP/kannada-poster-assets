@@ -19,7 +19,7 @@ const path = require("path");
 // ===== EDIT THESE =========================================================
 const CONFIG = {
   githubUser: "PrakashNayakP", // <-- your GitHub username
-  githubRepo: "kannada-poster-assets", // <-- your repo name
+  githubRepo: "cdn-static-a7f3", // <-- your repo name
   branch: "main",
 };
 // ==========================================================================

@@ -45,7 +45,7 @@ designs/
    used no phone images):
    - `"imagePath"` (only if `REPLACE_WITH_BACKGROUND…`) → the CDN URL of
      `<designId>_bg.png`
-     (`https://cdn.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/<categoryId>/<designId>_bg.png`),
+     (`https://cdn.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/designs/<categoryId>/<designId>_bg.png`),
      **or** a `"gradient:AARRGGBB,AARRGGBB"` / `"gradient:RRGGBB,RRGGBB"` spec.
    - each `"REPLACE_WITH_URL:asset_N.png"` (sticker/PIP/mask `source`) → the CDN
      URL of the file you uploaded for that `asset_N.png`.
@@ -66,7 +66,7 @@ designs/
    node sync.js --prune  # or: npm run sync:prune   (also removes deleted ones)
    ```
    Open the app → **Designs**. (jsDelivr caches `@main` URLs up to ~12h; if a new
-   file 404s, purge it: `https://purge.jsdelivr.net/gh/PrakashNayakP/kannada-poster-assets@main/designs/<categoryId>/<designId>.png`.)
+   file 404s, purge it: `https://purge.jsdelivr.net/gh/PrakashNayakP/cdn-static-a7f3@main/designs/<categoryId>/<designId>.png`.)
 
 > One-time setup (Node, `serviceAccountKey.json`, `npm install`) and the full
 > admin guide live in the app repo's `docs/asset-management.md`.
