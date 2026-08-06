@@ -6,3 +6,6 @@ node_modules/
 
 # Firebase CLI deploy cache
 .firebase/
+
+# IDE — workspace.xml carries local filesystem paths, and this repo is public
+.idea/
