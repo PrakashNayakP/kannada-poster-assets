@@ -220,13 +220,15 @@ async function syncQuotes() {
 /**
  * Writes config.json to Firestore config/ads (the app's remote ad config).
  * A single document, so it's a plain overwrite — config.json is the source of
- * truth. The leading "_comment" key is stripped before writing.
+ * truth. Keys starting with "_" are documentation only and are stripped.
  */
 async function syncConfig() {
   if (!fs.existsSync("./config.json")) return;
 
   const config = JSON.parse(fs.readFileSync("./config.json", "utf8"));
-  delete config._comment;
+  // Strip every doc-only key, not just "_comment", so notes can be added
+  // next to the field they explain without leaking into Firestore.
+  for (const k of Object.keys(config)) if (k.startsWith("_")) delete config[k];
 
   await db.collection("config").doc("ads").set(config);
   console.log("  config/ads: written");
@@ -241,7 +243,9 @@ async function syncAppConfig() {
   if (!fs.existsSync("./app-config.json")) return;
 
   const config = JSON.parse(fs.readFileSync("./app-config.json", "utf8"));
-  delete config._comment;
+  // Strip every doc-only key, not just "_comment", so notes can be added
+  // next to the field they explain without leaking into Firestore.
+  for (const k of Object.keys(config)) if (k.startsWith("_")) delete config[k];
 
   await db.collection("config").doc("app").set(config);
   console.log("  config/app: written");
