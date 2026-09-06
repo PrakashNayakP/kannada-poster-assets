@@ -1,54 +1,450 @@
 {
   "_comment": "Category metadata for stickers, templates and designs. Images placed in stickers/<id>/ or templates/<id>/ are turned into CDN URLs and attached to that category. Emojis (stickers only) are listed inline. Quotes live in quotes.json. Editable 'designs' are full posters: each item has a JSON layout file designs/<catId>/<id>.json and a full-composite thumbnail designs/<catId>/<id>.png (both produced by the app's dev 'Save as template' export). Optional `premium` lists which items (emoji chars or image filenames) require a rewarded ad to unlock; for designs `premium` is a per-item boolean.",
-
   "stickers": [
-    { "id": "kannada",   "name": "Kannada",  "order": 1, "emojis": [], "premium": ["RCB-Logo-2-Star.png", "Appu.png","Karnataka.png"],
+    {
+      "id": "lipi",
+      "name": "Kannada Text",
+      "order": 1,
+      "emojis": [],
+      "premium": [
+        "Janumadinada-Shubashayagalu.png",
+        "Hosa-Varshada-Shubhashayagalu.png"
+      ],
       "tags": {
-        "Appu.png": "appu puneeth rajkumar actor power star kannada",
-        "Appu-Text.png": "appu text name kannada"
+        "Appa-Text.png": "appa father dad apna kannada text word art",
+        "Appu-Text.png": "appu puneeth rajkumar name text kannada",
+        "Avva-Text.png": "avva amma mother mom kannada text word art",
+        "Bengaluru-Text.png": "bengaluru bangalore city namma ooru kannada text",
+        "Besige-Text.png": "besige summer heat bisilu kannada text",
+        "Deepavalai-Text.png": "deepavali diwali festival lights habba kannada text",
+        "Ganesha-Text.png": "ganesha ganapati vinayaka chaturthi god kannada text",
+        "Geleya-Text.png": "geleya friend gelathi dosti kannada text",
+        "Hosa-Varshada-Shubhashayagalu.png": "hosa varsha new year shubhashaya greeting wishes kannada",
+        "Janumadinada-Shubashayagalu.png": "janumadina birthday hbd shubhashaya greeting wishes kannada",
+        "Kannada-Text.png": "kannada text word script lipi nudi",
+        "Karma-Returns.png": "karma returns attitude quote saying text",
+        "Karnataka-Text.png": "karnataka state naadu kannada text",
+        "Karnataka.png": "karnataka state name naadu kannada text",
+        "Namma-RCB.png": "namma rcb royal challengers bengaluru cricket ipl text",
+        "Preetiya-Hudugiye-Text.png": "preeti preetiya hudugi love girl romantic kannada text",
+        "Rayariddare-Text.png": "rayaru rayariddare dialogue kannada text",
+        "Shiva-Text.png": "shiva shankara mahadeva god kannada text",
+        "Shri-Rama-Text.png": "shri rama ram jai god kannada text",
+        "Tangi-Text.png": "tangi sister sis akka kannada text",
+        "Weekend-Kelsa-Madalla-Text.png": "weekend kelsa work funny attitude kannada text",
+        "kannadave-jati-dharma.png": "kannada jati dharma pride kannadiga abhimana text",
+        "karnadiga-sarvabhouma-text.png": "kannadiga sarvabhouma pride abhimana kannada text",
+        "nodi-swami-naavu-irode-heege-text.png": "nodi swami irode heege famous dialogue kannada text"
+      },
+      "desc": {
+        "Appa-Text.png": "Appa (father)",
+        "Appu-Text.png": "Appu name art",
+        "Avva-Text.png": "Avva (mother)",
+        "Bengaluru-Text.png": "Bengaluru",
+        "Besige-Text.png": "Besige (summer)",
+        "Deepavalai-Text.png": "Deepavali greeting",
+        "Ganesha-Text.png": "Ganesha",
+        "Geleya-Text.png": "Geleya (friend)",
+        "Hosa-Varshada-Shubhashayagalu.png": "Happy New Year in Kannada",
+        "Janumadinada-Shubashayagalu.png": "Happy Birthday in Kannada",
+        "Kannada-Text.png": "Kannada word art",
+        "Karma-Returns.png": "Karma returns",
+        "Karnataka-Text.png": "Karnataka in Kannada",
+        "Karnataka.png": "Karnataka word art",
+        "Namma-RCB.png": "Namma RCB",
+        "Preetiya-Hudugiye-Text.png": "Preetiya Hudugiye",
+        "Rayariddare-Text.png": "Rayariddare word art",
+        "Shiva-Text.png": "Shiva in Kannada",
+        "Shri-Rama-Text.png": "Shri Rama in Kannada",
+        "Tangi-Text.png": "Tangi (younger sister)",
+        "Weekend-Kelsa-Madalla-Text.png": "Weekend kelsa madalla",
+        "kannadave-jati-dharma.png": "Kannadave jati, Kannadave dharma",
+        "karnadiga-sarvabhouma-text.png": "Kannadiga Sarvabhouma",
+        "nodi-swami-naavu-irode-heege-text.png": "Nodi swami naavu irode heege"
+      }
+    },
+    {
+      "id": "karnataka",
+      "name": "Karnataka",
+      "order": 2,
+      "emojis": [],
+      "premium": [
+        "Kannada-Tayi.png",
+        "RCB-Logo-2-Star.png"
+      ],
+      "tags": {
+        "Appu.png": "appu puneeth rajkumar power star actor kannada",
+        "Auto.png": "auto rickshaw bengaluru transport namma ooru",
+        "Hand.png": "hand flag kannada karnataka pride",
+        "Kananda-Pen.png": "pen kannada writing lipi nudi",
+        "Kannada-Flag.png": "kannada flag baavuta red yellow karnataka",
+        "Kannada-Tayi.png": "kannada tayi bhuvaneshwari mother goddess karnataka",
+        "Kannadiga.png": "kannadiga pride abhimana kannada people",
+        "RCB-Logo-2-Star.png": "rcb royal challengers bengaluru cricket ipl logo star",
+        "RCB-Logo.png": "rcb royal challengers bengaluru cricket ipl logo",
+        "karnataka-map-with-appu.png": "karnataka map appu puneeth state naadu",
+        "rcb-18-cup.png": "rcb 18 kohli cup trophy ipl cricket bengaluru",
+        "rcb-logo-lion.png": "rcb lion logo cricket ipl bengaluru"
       },
       "desc": {
         "Appu.png": "Puneeth Rajkumar (Appu)",
-        "Appu-Text.png": "Appu text sticker"
+        "Auto.png": "Bengaluru auto rickshaw",
+        "Hand.png": "Hand with the Kannada flag",
+        "Kananda-Pen.png": "Kannada pen",
+        "Kannada-Flag.png": "Kannada flag",
+        "Kannada-Tayi.png": "Kannada Tayi Bhuvaneshwari",
+        "Kannadiga.png": "Kannadiga pride",
+        "RCB-Logo-2-Star.png": "RCB logo with two stars",
+        "RCB-Logo.png": "RCB logo",
+        "karnataka-map-with-appu.png": "Karnataka map with Appu",
+        "rcb-18-cup.png": "RCB 18 with the trophy",
+        "rcb-logo-lion.png": "RCB lion logo"
       }
     },
-    { "id": "actors",   "name": "Actors",  "order": 2,
+    {
+      "id": "gods",
+      "name": "Gods",
+      "order": 3,
+      "emojis": [],
+      "premium": [
+        "hanuma-rama-shiva-gods.png",
+        "ma-durga-devi.png"
+      ],
       "tags": {
-        "Appu.png": "appu puneeth rajkumar actor power star kannada",
-        "Appu-Rajakumara.png": "appu rajakumara puneeth rajkumar movie kannada actor",
-        "Appu-With-Parivala.png": "appu parivala puneeth rajkumar family kannada"
+        "Daiva.png": "daiva bhuta kola tulunadu coastal deity god",
+        "Jai-Sree-Ram.png": "jai shree ram rama god hindu bhakti",
+        "Shiva-God.png": "shiva shankara mahadeva god",
+        "Shiva-Trishool.png": "shiva trishul trident god",
+        "angry-hanuma.png": "hanuman hanuma anjaneya angry god",
+        "baby-krishna.png": "krishna baby bala gopala god",
+        "devi-godess-eyes.png": "devi goddess eyes durga amma kannu",
+        "ganapati.png": "ganapati ganesha vinayaka god chaturthi",
+        "god-cow.png": "cow gomata hasu sacred hindu",
+        "godess-sharadhe.png": "sharade saraswati goddess vidya devi",
+        "govinda.png": "govinda krishna vishnu venkateshwara god",
+        "hanma-face-white.png": "hanuman hanuma anjaneya face god",
+        "hanuma-anjaneya.png": "hanuman hanuma anjaneya god bhakti",
+        "hanuma-fire.png": "hanuman hanuma fire anjaneya god",
+        "hanuma-gada.png": "hanuman hanuma gada mace god",
+        "hanuma-gadhe.png": "hanuman hanuma gadhe mace god",
+        "hanuma-god-tall.png": "hanuman hanuma standing tall god",
+        "hanuma-logo-god.png": "hanuman hanuma logo emblem god",
+        "hanuma-peace-god.png": "hanuman hanuma peace calm god",
+        "hanuma-rama-shiva-gods.png": "hanuman rama shiva gods trio bhakti",
+        "hanuman-ji-ram.png": "hanuman ram bhakti god",
+        "hindu-flag.png": "hindu flag saffron kesari dhwaj bhagwa",
+        "koragajja.png": "koragajja daiva tulunadu coastal deity god",
+        "krishna-with-flute.png": "krishna flute kolalu venu god",
+        "lord-hanuma-dancing.png": "hanuman hanuma dancing god",
+        "lord-hanuma.png": "hanuman hanuma anjaneya god",
+        "lord-shiva-hands.png": "shiva hands kai god",
+        "lord-shiva.png": "shiva mahadeva shankara god",
+        "ma-durga-devi.png": "durga devi maa goddess amma navaratri",
+        "muddu-krishna-holding-flute.png": "krishna muddu flute kolalu baby god",
+        "muddu-krishna.png": "krishna muddu baby bala god",
+        "shiva-god-hands.png": "shiva hands namaskara god",
+        "shiva-hands-damaruga.png": "shiva damaru damaruga drum god",
+        "shivaji-maharaj.png": "shivaji maharaj maratha king warrior",
+        "sun-logo.png": "sun surya logo emblem",
+        "tilaka-shiva.png": "shiva tilaka tripundra namam forehead",
+        "trishool-black.png": "trishul trident shiva black",
+        "trishool.png": "trishul trident shiva weapon",
+        "trishul-bw.png": "trishul trident shiva monochrome",
+        "trishul.png": "trishul trident shiva weapon",
+        "tulunadu-flag.png": "tulunadu flag baavuta coastal karnataka"
       },
       "desc": {
-        "Appu.png": "Puneeth Rajkumar (Appu)",
-        "Appu-Rajakumara.png": "Appu as Rajakumara",
-        "Appu-With-Parivala.png": "Appu with Parivala"
+        "Daiva.png": "Daiva (Tulu Nadu deity)",
+        "Jai-Sree-Ram.png": "Jai Shree Ram",
+        "Shiva-God.png": "Lord Shiva",
+        "Shiva-Trishool.png": "Shiva with the trishul",
+        "angry-hanuma.png": "Angry Hanuman",
+        "baby-krishna.png": "Baby Krishna",
+        "devi-godess-eyes.png": "Devi's eyes",
+        "ganapati.png": "Ganapati",
+        "god-cow.png": "Sacred cow",
+        "godess-sharadhe.png": "Goddess Sharade",
+        "govinda.png": "Govinda",
+        "hanma-face-white.png": "Hanuman face",
+        "hanuma-anjaneya.png": "Anjaneya",
+        "hanuma-fire.png": "Hanuman with fire",
+        "hanuma-gada.png": "Hanuman with the gada",
+        "hanuma-gadhe.png": "Hanuman holding the gadhe",
+        "hanuma-god-tall.png": "Standing Hanuman",
+        "hanuma-logo-god.png": "Hanuman emblem",
+        "hanuma-peace-god.png": "Peaceful Hanuman",
+        "hanuma-rama-shiva-gods.png": "Hanuman, Rama and Shiva",
+        "hanuman-ji-ram.png": "Hanuman ji with Ram",
+        "hindu-flag.png": "Saffron flag",
+        "koragajja.png": "Koragajja",
+        "krishna-with-flute.png": "Krishna with the flute",
+        "lord-hanuma-dancing.png": "Dancing Hanuman",
+        "lord-hanuma.png": "Lord Hanuman",
+        "lord-shiva-hands.png": "Shiva's hands",
+        "lord-shiva.png": "Lord Shiva",
+        "ma-durga-devi.png": "Maa Durga",
+        "muddu-krishna-holding-flute.png": "Muddu Krishna with the flute",
+        "muddu-krishna.png": "Muddu Krishna",
+        "shiva-god-hands.png": "Shiva with folded hands",
+        "shiva-hands-damaruga.png": "Shiva with the damaru",
+        "shivaji-maharaj.png": "Chhatrapati Shivaji Maharaj",
+        "sun-logo.png": "Sun emblem",
+        "tilaka-shiva.png": "Shiva tilaka",
+        "trishool-black.png": "Trishul (black)",
+        "trishool.png": "Trishul",
+        "trishul-bw.png": "Trishul (black & white)",
+        "trishul.png": "Trishul",
+        "tulunadu-flag.png": "Tulu Nadu flag"
       }
     },
-    { "id": "nature",   "name": "Nature",   "order": 3, "emojis": ["🌸", "🌞", "🌙", "⭐", "🌈", "🍃", "🌺", "🌻", "🦋", "🌊"], "premium": ["🌻", "🦋"]  },
-    { "id": "symbols",  "name": "Symbols",  "order": 4 },
-    { "id": "art",      "name": "Art",      "order": 5, "emojis": [] },
-    { "id": "emotions", "name": "Emotions", "order": 6},
-    { "id": "festive",  "name": "Festive",  "order": 7 },
-    { "id": "gods",  "name": "Gods",  "order": 8 },
-    { "id": "troll",  "name": "Troll",  "order": 9 }
+    {
+      "id": "actors",
+      "name": "Actors",
+      "order": 4,
+      "emojis": [],
+      "premium": [
+        "Appu.png",
+        "yash-folding-hands.png"
+      ],
+      "tags": {
+        "Appu-Rajakumara.png": "appu puneeth rajakumara movie actor kannada",
+        "Appu-With-Parivala.png": "appu puneeth family parivara actor kannada",
+        "Appu.png": "appu puneeth rajkumar power star actor kannada",
+        "Ganesh.png": "ganesh golden star actor kannada",
+        "Nammatra-Beda-Kitcha.png": "kichcha sudeep nammatra beda dialogue meme actor",
+        "Rishabh-Shetty-Meme.png": "rishab shetty kantara actor meme kannada",
+        "Uppi-Auto-Raja.jpg": "upendra uppi auto raja movie actor",
+        "Uppi-Meme.png": "upendra uppi real star meme actor",
+        "Uppi-Prajakiya.png": "upendra uppi prajakeeya politics actor",
+        "Vishtnu-Dada-Meme.png": "vishnuvardhan vishnu dada sahasa simha meme actor",
+        "rukmini-vasanth-meme-hands-up.png": "rukmini vasanth actress meme hands up",
+        "yash-folding-hands.png": "yash rocking star kgf actor namaskara"
+      },
+      "desc": {
+        "Appu-Rajakumara.png": "Appu in Rajakumara",
+        "Appu-With-Parivala.png": "Appu with family",
+        "Appu.png": "Puneeth Rajkumar (Appu)",
+        "Ganesh.png": "Golden Star Ganesh",
+        "Nammatra-Beda-Kitcha.png": "Kichcha Sudeep — nammatra beda",
+        "Rishabh-Shetty-Meme.png": "Rishab Shetty meme",
+        "Uppi-Auto-Raja.jpg": "Upendra in Auto Raja",
+        "Uppi-Meme.png": "Upendra meme",
+        "Uppi-Prajakiya.png": "Upendra — Prajakeeya",
+        "Vishtnu-Dada-Meme.png": "Vishnu Dada meme",
+        "rukmini-vasanth-meme-hands-up.png": "Rukmini Vasanth, hands up",
+        "yash-folding-hands.png": "Yash with folded hands"
+      }
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "order": 5,
+      "emojis": [],
+      "premium": [
+        "wearing-king-crown-troll-face.png",
+        "super-kiss-troll-aura-meme.png"
+      ],
+      "tags": {
+        "aura-troll-meme-laugh.png": "troll aura laugh meme funny",
+        "king-wow-troll-meme.png": "troll king wow crown meme",
+        "laughing-troll-meme.png": "troll laugh lol meme funny",
+        "red-eye-skull-troll-face.png": "troll skull red eye meme scary",
+        "shh-troll-meme.png": "troll shh quiet silence meme",
+        "super-kiss-troll-aura-meme.png": "troll kiss aura meme",
+        "troll-aura-meme.png": "troll aura meme",
+        "troll-aura-shh-meme.png": "troll aura shh quiet meme",
+        "troll-face-1.png": "troll face classic meme",
+        "troll-face-2.png": "troll face meme",
+        "trollface-3.png": "troll face meme",
+        "wearing-king-crown-troll-face.png": "troll crown king meme",
+        "you-hand-pointing-troll-meme.png": "troll pointing you hand meme"
+      },
+      "desc": {
+        "aura-troll-meme-laugh.png": "Laughing aura troll",
+        "king-wow-troll-meme.png": "King wow troll",
+        "laughing-troll-meme.png": "Laughing troll",
+        "red-eye-skull-troll-face.png": "Red-eye skull troll",
+        "shh-troll-meme.png": "Shh troll",
+        "super-kiss-troll-aura-meme.png": "Kiss troll with aura",
+        "troll-aura-meme.png": "Aura troll",
+        "troll-aura-shh-meme.png": "Shh aura troll",
+        "troll-face-1.png": "Troll face",
+        "troll-face-2.png": "Troll face variant",
+        "trollface-3.png": "Troll face variant",
+        "wearing-king-crown-troll-face.png": "Troll wearing a crown",
+        "you-hand-pointing-troll-meme.png": "Pointing troll"
+      }
+    },
+    {
+      "id": "meme",
+      "name": "Memes",
+      "order": 6,
+      "emojis": [],
+      "premium": [],
+      "tags": {
+        "meme-ajja.png": "ajja grandpa thatha meme funny kannada"
+      },
+      "desc": {
+        "meme-ajja.png": "Ajja meme"
+      }
+    },
+    {
+      "id": "emoji",
+      "name": "Emoji",
+      "order": 7,
+      "emojis": [
+        "🌸",
+        "🌞",
+        "🌙",
+        "⭐",
+        "🌈",
+        "🍃",
+        "🌺",
+        "🌻",
+        "🦋",
+        "🌊"
+      ],
+      "premium": [
+        "🌻",
+        "🦋"
+      ],
+      "tags": {},
+      "desc": {}
+    },
+    {
+      "id": "logo",
+      "name": "Logos",
+      "order": 8,
+      "emojis": [],
+      "premium": [
+        "instagram-1.png",
+        "whatsapp-1.png"
+      ],
+      "tags": {
+        "facebook-1.png": "facebook fb social media icon logo",
+        "facebook-2.png": "facebook fb social media icon logo",
+        "facebook-3.png": "facebook fb social media icon logo",
+        "google.png": "google search social icon logo",
+        "instagram-1.png": "instagram insta social media icon logo",
+        "instagram-2.png": "instagram insta social media icon logo",
+        "instagram-3.png": "instagram insta social media icon logo",
+        "linkedin-1.png": "linkedin social media icon logo",
+        "linkedin-2.png": "linkedin social media icon logo",
+        "meesho.png": "meesho shopping ecommerce icon logo",
+        "snapchat.png": "snapchat snap social media icon logo",
+        "tiktok.png": "tiktok social media icon logo",
+        "whatsapp-1.png": "whatsapp wa social media icon logo",
+        "whatsapp-2.png": "whatsapp wa social media icon logo",
+        "x-twitter.png": "x twitter social media icon logo",
+        "youtube-1.png": "youtube yt video social icon logo",
+        "youtube-2.png": "youtube yt video social icon logo",
+        "youtube-3.png": "youtube yt video social icon logo"
+      },
+      "desc": {
+        "facebook-1.png": "Facebook icon",
+        "facebook-2.png": "Facebook icon",
+        "facebook-3.png": "Facebook icon",
+        "google.png": "Google icon",
+        "instagram-1.png": "Instagram icon",
+        "instagram-2.png": "Instagram icon",
+        "instagram-3.png": "Instagram icon",
+        "linkedin-1.png": "LinkedIn icon",
+        "linkedin-2.png": "LinkedIn icon",
+        "meesho.png": "Meesho icon",
+        "snapchat.png": "Snapchat icon",
+        "tiktok.png": "TikTok icon",
+        "whatsapp-1.png": "WhatsApp icon",
+        "whatsapp-2.png": "WhatsApp icon",
+        "x-twitter.png": "X (Twitter) icon",
+        "youtube-1.png": "YouTube icon",
+        "youtube-2.png": "YouTube icon",
+        "youtube-3.png": "YouTube icon"
+      }
+    },
+    {
+      "id": "others",
+      "name": "Others",
+      "order": 9,
+      "emojis": [],
+      "premium": [
+        "decoration.png"
+      ],
+      "tags": {
+        "decoration.png": "decoration ornament floral design border",
+        "hand-flower.png": "hand flower hoovu gesture"
+      },
+      "desc": {
+        "decoration.png": "Decorative ornament",
+        "hand-flower.png": "Hand holding a flower"
+      }
+    }
   ],
-
   "templates": [
-    { "id": "nature",   "name": "Nature",   "order": 1, "premium": ["pexels-dropshado-32547449.jpg"] },
-    { "id": "festival", "name": "Festival", "order": 2 },
-    { "id": "cinema",   "name": "Cinema",   "order": 3, "premium": [""] },
-    { "id": "kannada",   "name": "Kannada",   "order": 4 }
-
+    {
+      "id": "nature",
+      "name": "Nature",
+      "order": 1,
+      "premium": [
+        "pexels-dropshado-32547449.jpg"
+      ]
+    },
+    {
+      "id": "festival",
+      "name": "Festival",
+      "order": 2
+    },
+    {
+      "id": "cinema",
+      "name": "Cinema",
+      "order": 3,
+      "premium": [
+        ""
+      ]
+    },
+    {
+      "id": "kannada",
+      "name": "Kannada",
+      "order": 4
+    }
   ],
-
   "designs": [
-    { "id": "business", "name": "Business", "order": 1, "items": [
-      { "id": "shop-sale", "name": "Shop Sale", "premium": false, "tags": "sale offer discount shop business opening" }
-    ] },
-    { "id": "festival", "name": "Festival", "order": 2, "items": [
-      { "id": "raksha-bandhan-01", "name": "Raksha Bandhan", "premium": true, "tags": "raksha bandhan rakhi festival greeting ರಕ್ಷಾಬಂಧನ" },
-      { "id": "diwali-01", "name": "Diwali Greeting", "premium": true, "tags": "diwali deepavali festival lamp greeting" }
-    ] },
-    { "id": "social", "name": "Social", "order": 3, "items": [] }
+    {
+      "id": "business",
+      "name": "Business",
+      "order": 1,
+      "items": [
+        {
+          "id": "shop-sale",
+          "name": "Shop Sale",
+          "premium": false,
+          "tags": "sale offer discount shop business opening"
+        }
+      ]
+    },
+    {
+      "id": "festival",
+      "name": "Festival",
+      "order": 2,
+      "items": [
+        {
+          "id": "raksha-bandhan-01",
+          "name": "Raksha Bandhan",
+          "premium": true,
+          "tags": "raksha bandhan rakhi festival greeting ರಕ್ಷಾಬಂಧನ"
+        },
+        {
+          "id": "diwali-01",
+          "name": "Diwali Greeting",
+          "premium": true,
+          "tags": "diwali deepavali festival lamp greeting"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "order": 3,
+      "items": []
+    }
   ]
 }
